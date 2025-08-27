@@ -1,0 +1,5 @@
+{
+  "name": "illarion-vbu-map",
+  "description": "Illarion VBU Map",
+  "entrypoints": ["server/lua/init.lua"]
+}
