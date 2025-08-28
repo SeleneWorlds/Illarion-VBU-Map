@@ -1,0 +1,3 @@
+[submodule "server/maps"]
+	path = server/maps
+	url = https://github.com/Illarion-eV/Illarion-Map.git
