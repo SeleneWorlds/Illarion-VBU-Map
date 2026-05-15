@@ -73,8 +73,8 @@ function convertMap(tilesFile)
             -- Warps are in the format X;Y;ToX;ToY;ToLevel
             local x, y, toX, toY, toLevel = line:match("(-?%d+);(-?%d+);(-?%d+);(-?%d+);(-?%d+)")
             map:annotateTile(tonumber(x) + startX, tonumber(y) + startY, z, "illarion:warp", {
-                x = tonumber(x) + startX,
-                y = tonumber(y) + startY,
+                x = tonumber(toX),
+                y = tonumber(toY),
                 z = tonumber(toLevel)
             })
         end
