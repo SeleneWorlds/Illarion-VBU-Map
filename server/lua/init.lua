@@ -98,7 +98,7 @@ if not Saves.has(mergedMapPath) then
     local files = Resources.listFiles("illarion-vbu-map", "server/maps/*.tiles.txt")
     for _, file in pairs(files) do
         local outputPath = convertMap(file)
-        local mapTree = Saves.load(outputPath)
+        local mapTree = Saves.loadMapTree(outputPath)
         if mapTree then
             mergedMap:merge(mapTree)
         else
@@ -109,5 +109,5 @@ if not Saves.has(mergedMapPath) then
 end
 
 print("Loading " .. mergedMapPath)
-local vbuMap = Saves.load(mergedMapPath)
+local vbuMap = Saves.loadMapTree(mergedMapPath)
 Dimensions.getDefault():setMap(vbuMap)
